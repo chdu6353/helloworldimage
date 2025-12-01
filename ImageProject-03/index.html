@@ -5,11 +5,22 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <!-- <audio> <img> <video> -->
+          <a-asset-item id="body" src="body-poly.obj"> </a-asset-item>
+          <a-asset-item id="leftwing" src="left_wing_v2.obj"> </a-asset-item>
+          <a-asset-item id="rightwing" src="right_wing_v2.obj"> </a-asset-item>
+          <a-asset-item id="demogorgon" src="demogorgon_spawn1-base.25mm.low.circle.obj"></a-asset-item>
+          <img id="scarypic" src="equirectangularscary.jpg">
+      </a-assets>
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+      <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere> -->
+      <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
+      <a-sky src="#scarypic"></a-sky>
+      <a-entity obj-model="obj: #body" scale="0.01 0.01 0.01" position="0 2 -1.5"></a-entity>
+      <a-entity obj-model="obj: #leftwing" scale="0.01 0.01 0.01" position="0 2.1 -1"></a-entity>
+      <a-entity obj-model="obj: #rightwing" scale="0.01 0.01 0.01" position="0 1.9 -1"></a-entity>
     </a-scene>
   </body>
 </html>
